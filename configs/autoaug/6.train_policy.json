@@ -1,0 +1,10 @@
+{
+    "dataset": {
+        "name": "pick_expert",
+	      "num_cameras": 5,
+	      "image_augmentation": "mcts_learned"
+    },
+    "model": {
+        "name": "pick_control"
+    }
+}

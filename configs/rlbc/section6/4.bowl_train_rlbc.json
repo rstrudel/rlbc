@@ -1,0 +1,16 @@
+{
+    "general": {
+	      "env_name": "UR5-BowlCamEnv-v0",
+	      "max_length": 600
+    },
+    "bc": {
+	      "bc_model_name": "bowl_skills",
+        "bc_model_epoch": $BEST_EPOCH_NUMBER
+    },
+    "hierarchy": {
+	      "timescale": 60
+    },
+    "log": {
+	      "folder": "bowl_rlbc"
+    }
+}

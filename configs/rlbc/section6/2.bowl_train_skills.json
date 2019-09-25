@@ -1,0 +1,12 @@
+{
+    "model": {
+        "name": "bowl_skills",
+        "mode": "film",
+        "action_space": "tool_lin",
+        "num_skills": 4
+    },
+    "dataset": {
+        "name": "bowl_demos",
+        "num_cameras": 5
+    }
+}

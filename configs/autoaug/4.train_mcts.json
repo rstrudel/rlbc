@@ -1,0 +1,26 @@
+{
+    "dataset": {
+        "num_cameras": 5
+    },
+    "model": {
+        "mode": "regression",
+	      "action_space": "cube_pos",
+	      "num_frames": 1,
+	      "name": "regression_checkpoint",
+	      "epoch": $BEST_EPOCH_NUMBER,
+        "load_optimizer": false
+    },
+    "train": {
+        "epochs": 61,
+        "eval_first_epoch": 20
+    },
+    "sim2real": {
+	      "name": "train_mcts",
+        "trainset_name": "pick_20k",
+        "evalset_name": "pick_real",
+        "max_demos_train": 2500,
+        "max_demos_eval": 200,
+        "cluster": "local",
+        "num_gpus": 1
+    }
+}

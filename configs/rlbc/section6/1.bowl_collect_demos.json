@@ -1,0 +1,10 @@
+{
+    "collect": {
+        "folder": "bowl_demos",
+        "env": "UR5-Bowl5RandCamEnv-v0",
+        "episodes": 250,
+        "workers": 12,
+        "skill_collection": true,
+        "record_failed": true
+    }
+}

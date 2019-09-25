@@ -1,0 +1,1 @@
+python3 -m bc.eval_reg -n regression_checkpoint -d pick_20k

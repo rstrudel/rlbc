@@ -1,0 +1,18 @@
+{
+    "collect": {
+        "folder": "breakfast_skills_evaluation",
+        "env": "UR5-BreakfastSimpleCamEnv-v0",
+        "db_type": "evaluation",
+        "agent": "bc",
+        "seed": 5000,
+        "episodes": 40,
+        "workers": 10,
+        "skill_sequence": "[0,2,3,1,2]",
+        "timescale": 220,
+        "first_epoch": 4,
+        "iter_epoch": 4
+    },
+    "model": {
+        "name": "breakfast_skills"
+    }
+}

@@ -1,0 +1,12 @@
+{
+    "dataset": {
+        "name": "pick_20k",
+	      "num_cameras": 5
+    },
+    "model": {
+        "name": "regression_checkpoint",
+	      "mode": "regression",
+	      "action_space": "cube_pos",
+	      "num_frames": 1
+    }
+}

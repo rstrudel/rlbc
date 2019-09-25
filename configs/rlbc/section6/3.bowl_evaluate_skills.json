@@ -1,0 +1,18 @@
+{
+    "collect": {
+        "folder": "bowl_skills_evaluation",
+        "env": "UR5-BowlCamEnv-v0",
+        "db_type": "evaluation",
+        "agent": "bc",
+        "seed": 5000,
+        "episodes": 25,
+        "workers": 10,
+        "skill_sequence": "[2,0,1,3]",
+        "timescale": 60,
+        "first_epoch": 4,
+        "iter_epoch": 4
+    },
+    "model": {
+        "name": "bowl_skills"
+    }
+}

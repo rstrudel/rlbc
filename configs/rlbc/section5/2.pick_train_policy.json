@@ -1,0 +1,10 @@
+{
+    "model": {
+        "name": "pick_policy",
+        "action_space": "tool_lin"
+    },
+    "dataset": {
+        "num_cameras": 5,
+        "name": "pick_demos"
+    }
+}

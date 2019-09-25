@@ -1,0 +1,8 @@
+{
+    "collect": {
+        "folder": "pick_demos",
+        "env": "UR5-Pick5RandCamEnv-v0",
+        "episodes": 250,
+        "workers": 12
+    }
+}

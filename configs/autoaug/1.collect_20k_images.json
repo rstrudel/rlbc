@@ -1,0 +1,8 @@
+{
+    "collect": {
+        "folder": "pick_20k",
+	      "env": "UR5-Short-Pick5RandCamEnv-v0",
+	      "episodes": 20000,
+	      "workers": 20
+    }
+}

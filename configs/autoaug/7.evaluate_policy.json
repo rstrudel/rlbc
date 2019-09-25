@@ -1,0 +1,14 @@
+{
+    "collect": {
+        "folder": "pick_control_evaluation",
+	      "env": "UR5-PickCamEnv-v0",
+	      "episodes": 32,
+	      "workers": 10,
+	      "seed": 5000,
+	      "db_type": "evaluation",
+	      "agent": "bc"
+    },
+    "model": {
+        "name": "pick_control"
+    }
+}

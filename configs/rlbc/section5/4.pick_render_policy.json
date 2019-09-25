@@ -1,0 +1,15 @@
+{
+    "collect": {
+        "folder": "pick_render",
+        "env": "UR5-PickCamEnv-v0",
+        "db_type": "video",
+        "agent": "bc",
+        "seed": 5000,
+        "episodes": 25,
+        "workers": 10
+    },
+    "model": {
+        "name": "pick_policy",
+        "epoch": $BEST_EPOCH_NUMBER
+    }
+}

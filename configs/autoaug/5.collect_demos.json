@@ -1,0 +1,8 @@
+{
+    "collect": {
+        "folder": "pick_expert",
+	      "env": "UR5-Pick5RandCamEnv-v0",
+	      "episodes": 200,
+	      "workers": 20
+    }
+}
