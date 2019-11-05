@@ -117,7 +117,7 @@ class ImageTransform:
                 img_size=img_size)
             params['affine'] = ret
         elif name_transformation == 'white_noise':
-            params['amplitude'] = torch.rand(1)
+            params['amplitude'] = magn
         elif name_transformation == 'scale':
             a_min, a_max = 1 - magn, 1 + magn
             b_min, b_max = -magn, magn
