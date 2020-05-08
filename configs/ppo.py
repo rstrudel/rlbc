@@ -63,9 +63,9 @@ def cfg_ppo():
 
 @bc_ingredient.config
 def cfg_bc():
-    # name of the pretrained model with bc skills (should be stored in ppo.settings.MODEL_LOGDIR)
+    # name of the pretrained model with bc skills (should be stored in "$RLBC_MODELS/name")
     bc_model_name = None
-    # epoch of the pretrained model with bc skills (should be stored in ppo.settings.MODEL_LOGDIR)
+    # epoch of the pretrained model with bc skills (should be stored in "$RLBC_MODELS/name")
     bc_model_epoch = None
     # which data augmentation to use for the frames
     augmentation = ''
@@ -91,11 +91,11 @@ def cfg_hierarchy():
 
 @log_ingredient.config
 def cfg_log():
-    # folder to save the model (will be saved in ppo.settings.MODEL_LOGDIR/name)
+    # folder to save the model (will be saved in "$RLBC_MODELS/name")
     folder = 'default'
     # log interval, one log per n updates
     log_interval = 1
     # save interval, one save per n updates
     save_interval = 2
-    # whether to write ALL environments gifs to $LOGDIR/gifs
+    # whether to write ALL environments gifs to "$RLBC_MODELS/name/gif"
     write_gifs = False

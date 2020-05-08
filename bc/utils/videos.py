@@ -1,9 +1,10 @@
+import os
 import skvideo
 import skvideo.io as skv
 import numpy as np
 
-from bc.settings import FFMPEG_PATH
-skvideo.setFFmpegPath(FFMPEG_PATH)
+if 'FFMPEG_PATH' in os.environ:
+    skvideo.setFFmpegPath(os.environ['FFMPEG_PATH'])
 
 
 def write_video(frames, path):

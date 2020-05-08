@@ -7,8 +7,6 @@ import numpy as np
 from bc.dataset import Frames, Signals
 from bc.agent import RegressionAgent
 
-from bc.settings import MODEL_LOGDIR, DATASET_LOGDIR
-
 
 def get_args():
     parser = argparse.ArgumentParser()
@@ -85,7 +83,7 @@ def plot_errors(errors_nets, args):
 
 
 def read_dataset(args, signal_keys):
-    dataset_path = os.path.join(DATASET_LOGDIR, args.dataset_name)
+    dataset_path = os.path.join(os.environ['RLBC_DATA'], args.dataset_name)
     frames = Frames(dataset_path, channels=['depth'])
     signals = Signals(dataset_path, signal_keys, normalize=False)
 
@@ -116,7 +114,7 @@ def main():
 
     for net_name in args.net_names:
         error_net_cms = []
-        net_path = os.path.join(MODEL_LOGDIR, net_name)
+        net_path = os.path.join(os.environ['RLBC_MODELS'], net_name)
         for net_epoch in range(*args.net_epochs, 2):
             agent = RegressionAgent(path=net_path, epoch=net_epoch, device='cuda')
             print('Evaluating epoch {} of network {}'.format(net_epoch, net_path))

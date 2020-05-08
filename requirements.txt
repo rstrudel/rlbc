@@ -1,7 +1,7 @@
 sacred==0.7.5
 sk-video
 torch==1.1.0
-torchvision
+torchvision==0.3.0
 tensorboardX
 dask[complete]
 termcolor
@@ -11,7 +11,7 @@ lmdb
 Pillow
 click
 joblib
-gym
+gym==0.10.5
 numpy
 matplotlib
 filelock

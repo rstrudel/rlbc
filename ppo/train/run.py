@@ -13,7 +13,6 @@ from ppo.parts import stats
 from ppo.train import utils
 from configs.ppo import train_ingredient
 
-from ppo.settings import MODEL_LOGDIR
 
 ex = Experiment('train', ingredients=[train_ingredient])
 
@@ -29,7 +28,7 @@ def parse_args(general, ppo, bc, hierarchy, log):
 @ex.automain
 def main():
     args = parse_args()
-    logdir = os.path.join(MODEL_LOGDIR, args.folder, 'seed{:02}'.format(args.seed))
+    logdir = os.path.join(os.environ['RLBC_MODELS'], args.folder, 'seed{:02}'.format(args.seed))
     args, policy, agent, stats_global, stats_local, exp_vars = utils.init_training(args, logdir)
     envs = exp_vars.envs
     action_space_skills = Box(-np.inf, np.inf, (args.bc_args['dim_action'],), dtype=np.float)

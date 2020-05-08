@@ -8,11 +8,11 @@ SETTINGS.CONFIG.READ_ONLY_CONFIG = False
 
 @sim2real_ingredient.config
 def cfg_sim2real():
-    # name of the model (will be saved in bc.settings.DATASET_LOGDIR/name)
+    # name of the model (will be saved in "$RLBC_DATA/name")
     name = None
-    # name of the training dataset (will be loaded from bc.settings.DATASET_LOGDIR/name)
+    # name of the training dataset (will be loaded from "$RLBC_DATA/name")
     trainset_name = None
-    # name of the validation dataset (will be loaded from bc.settings.DATASET_LOGDIR/name)
+    # name of the validation dataset (will be loaded from "$RLBC_DATA/name")
     evalset_name = None
     # number of demos in the training dataset
     max_demos_train = None

@@ -2,7 +2,6 @@ import os
 import torch
 
 from bc.dataset import Actions
-from ppo.settings import MODEL_LOGDIR
 
 
 def ppo_model(logdir, device):
@@ -21,7 +20,7 @@ def ppo_model(logdir, device):
 def bc_model(args, device):
     if args.bc_model_name:
         assert args.bc_model_epoch is not None, 'bc model epoch is not specified'
-        bc_model_path = os.path.join(MODEL_LOGDIR, args.bc_model_name, 'model_{}.pth'.format(
+        bc_model_path = os.path.join(os.environ['RLBC_MODELS'], args.bc_model_name, 'model_{}.pth'.format(
             args.bc_model_epoch))
         if device.type == 'cpu':
             loaded_dict = torch.load(bc_model_path, map_location=lambda storage, loc: storage)

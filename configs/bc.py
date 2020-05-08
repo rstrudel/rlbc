@@ -9,7 +9,7 @@ SETTINGS.CONFIG.READ_ONLY_CONFIG = False
 
 @model_ingredient.config
 def cfg_model():
-    # name of the model (will be saved in settings_hrbc.MODEL_LOGDIR/name)
+    # name of the model (will be saved in "$RLBC_MODELS/name")
     name = ''
     # name of the architecture
     archi = 'resnet_18_narrow32'
@@ -43,7 +43,7 @@ def cfg_model():
 
 @dataset_ingredient.config
 def cfg_dataset():
-    # name of the dataset (will be saved in bc.settings.DATASET_LOGDIR/name)
+    # name of the dataset (will be saved in "$RLBC_DATA/name")
     name = ''
     # max number of demos to train on
     max_demos = None
@@ -83,7 +83,7 @@ def cfg_train():
 
 @collect_ingredient.config
 def cfg_collect():
-    # folder to save data or report (will be saved in bc.settings.DATASET_LOGDIR/folder)
+    # folder to save data or report (will be saved in "$RLBC_DATA/folder")
     folder = ''
     # agent type: script, bc or rl
     agent = 'script'

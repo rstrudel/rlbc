@@ -7,6 +7,30 @@ This repository contains source code of the following papers:
 ## Learning to combine primitive skills: A step towards versatile robotic manipulation
 To reproduce the paper experiments, follow the steps:
 
+### Quickstart
+
+Clone repo:
+```bash
+$ git clone https://github.com/rstrudel/rlbc.git rlbc
+$ export RLBC_ROOT=$(pwd)/rlbc
+$ export RLBC_MODELS=$RLBC_ROOT/models
+$ export RLBC_DATA=$RLBC_ROOT/data
+$ mkdir $RLBC_DATA; mkdir $RLBC_MODELS
+$ export PYTHONPATH=$PYTHONPATH:$RLBC_ROOT
+```
+
+Install requirements:
+```bash
+$ virtualenv -p $(which python3.7) rlbc_env
+$ source rlbc_env/bin/activate
+
+$ cd $RLBC_MODELS/..
+$ pip install --upgrade pip
+$ pip install -r requirements.txt
+```
+
+Install Manipulation Imitation Environments (MImE): follow [these steps](https://github.com/ikalevatykh/mime).
+
 ### BC skills training
 1. **Collect a dataset with expert trajectories**
 ```
@@ -55,7 +79,7 @@ To train a policy for a real-world UR5 arm, follow the steps:
 
 0. **Collect 200 pairs of robot images and cube positions on a real robot**
  
-Save the dataset to `bc.settings.DATASET_LOGDIR/pick_real`.
+Save the dataset to `$RLBC_DATA/pick_real`.
 
 1. **Collect 20000 pairs of robot images and cube positions in simulation**
 ```
