@@ -24,7 +24,7 @@ Install requirements:
 $ virtualenv -p $(which python3.7) rlbc_env
 $ source rlbc_env/bin/activate
 
-$ cd $RLBC_MODELS/..
+$ cd $RLBC_ROOT
 $ pip install --upgrade pip
 $ pip install -r requirements.txt
 ```
