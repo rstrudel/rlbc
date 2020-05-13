@@ -29,7 +29,7 @@ $ pip install --upgrade pip
 $ pip install -r requirements.txt
 ```
 
-Install Manipulation Imitation Environments (MImE): follow [these steps](https://github.com/ikalevatykh/mime).
+Install Manipulation Imitation Environments (MImE): follow [these steps](https://github.com/ikalevatykh/mime-release).
 
 ### BC skills training
 1. **Collect a dataset with expert trajectories**
