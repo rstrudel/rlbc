@@ -70,7 +70,7 @@ python3 -m ppo.train.run with configs/rlbc/section6/4.bowl_train_rlbc.json
 ```
 5. **Evaluate the RLBC policy**
 ```
-python3 -m ppo.train.run with configs/rlbc/section6/5.bowl_evaluate_rlbc.json
+python3 -m bc.collect_demos with configs/rlbc/section6/5.bowl_evaluate_rlbc.json
 ```
 
 
