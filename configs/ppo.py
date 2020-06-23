@@ -17,6 +17,8 @@ def cfg_general():
     env_name = 'UR5-BowlCamEnv-v0'
     # random seed
     seed = 1
+    # number of epochs to train the policy for
+    train_epochs = 101
     # whether to render the training
     render = False
     # whether to stop the execution in the very beginning for debug

@@ -254,9 +254,9 @@ class Collector:
         if not info['success']:
             if action is None:
                 info['failure_message'] = 'Reached max steps.'
-            click.secho(
-                'Failure Seed {}: {}'.format(seed, info['failure_message']),
-                fg='red')
+            # click.secho(
+            #     'Failure Seed {}: {}'.format(seed, info['failure_message']),
+            #     fg='red')
 
         return info['success'], seed, epoch, count
 
@@ -270,7 +270,7 @@ class Collector:
         # remove dataset if filtering failures
         if self.dataset_type in ['demos']:
             if success or self.record_fails:
-                print('Writing trajectory {}'.format(seed))
+                # print('Writing trajectory {}'.format(seed))
                 # update images and scalars dataset with last observations
                 if observs:
                     frames_chunk, scalars_chunk = process_trajectory(

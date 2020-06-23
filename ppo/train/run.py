@@ -38,10 +38,10 @@ def main():
 
     if args.pudb:
         import pudb; pudb.set_trace()
-    epoch, env_steps = exp_vars.start_epoch, exp_vars.start_step
+    env_steps = exp_vars.start_step
     reward = torch.zeros((args.num_processes, 1)).type_as(obs[0])
     need_master_action, policy_values_cache = np.ones((args.num_processes,)), None
-    while True:
+    for epoch in range(exp_vars.start_epoch, args.train_epochs):
         print('Starting epoch {}'.format(epoch))
         master_steps_done = 0
         pbar = tqdm(total=args.num_master_steps_per_update * args.num_processes)
@@ -101,11 +101,6 @@ def main():
         if epoch % args.log_interval == 0 and len(stats_global['length']) > 1:
             log.log_train(
                 env_steps, start, stats_global, action_loss, value_loss, dist_entropy, epoch)
-        epoch += 1
         if env_steps > args.num_train_timesteps:
             print('Number of env steps reached the maximum number of frames')
             break
-
-
-if __name__ == "__main__":
-    main()

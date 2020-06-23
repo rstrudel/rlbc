@@ -1,6 +1,7 @@
 {
     "general": {
 	      "env_name": "UR5-BowlCamEnv-v0",
+        "seed": 2,
 	      "max_length": 600
     },
     "bc": {

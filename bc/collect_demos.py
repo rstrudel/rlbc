@@ -105,9 +105,9 @@ def main(model, collect):
     print(colored('Maximum {} steps in one trajectory'.format(max_steps), 'green'))
     print(colored('Data collection took {} seconds'.format(time.time() - t0), 'green'))
 
-    if len(failed_episodes):
-        print(colored('Failed {} trajectories: {}'.format(
-            len(failed_episodes), sorted(failed_episodes)), 'red'))
+    # if len(failed_episodes):
+    #     print(colored('Failed {} trajectories: {}'.format(
+    #         len(failed_episodes), sorted(failed_episodes)), 'red'))
 
     if report is not None:
         print_report(report)

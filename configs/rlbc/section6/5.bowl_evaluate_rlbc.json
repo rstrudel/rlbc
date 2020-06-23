@@ -1,6 +1,6 @@
 {
     "collect": {
-        "folder": "bowl_hrlbc_render",
+        "folder": "bowl_rlbc_evaluation",
         "env": "UR5-BowlCamEnv-v0",
         "db_type": "evaluation",
         "agent": "rl",
@@ -11,6 +11,6 @@
         "iter_epoch": 4
     },
     "model": {
-        "name": "bowl_rlbc"
+        "name": "bowl_rlbc/seed02"
     }
 }
