@@ -11,22 +11,22 @@ To reproduce the paper experiments, follow the steps:
 
 Clone repo:
 ```bash
-$ git clone https://github.com/rstrudel/rlbc.git rlbc
-$ export RLBC_ROOT=$(pwd)/rlbc
-$ export RLBC_MODELS=$RLBC_ROOT/models
-$ export RLBC_DATA=$RLBC_ROOT/data
-$ mkdir $RLBC_DATA; mkdir $RLBC_MODELS
-$ export PYTHONPATH=$PYTHONPATH:$RLBC_ROOT
+git clone https://github.com/rstrudel/rlbc.git rlbc
+export RLBC_ROOT=$(pwd)/rlbc
+export RLBC_MODELS=$RLBC_ROOT/models
+export RLBC_DATA=$RLBC_ROOT/data
+mkdir $RLBC_DATA; mkdir $RLBC_MODELS
+export PYTHONPATH=$PYTHONPATH:$RLBC_ROOT
 ```
 
 Install requirements:
 ```bash
-$ virtualenv -p $(which python3.7) rlbc_env
-$ source rlbc_env/bin/activate
+virtualenv -p $(which python3.7) rlbc_env
+source rlbc_env/bin/activate
 
-$ cd $RLBC_ROOT
-$ pip install --upgrade pip
-$ pip install -r requirements.txt
+cd $RLBC_ROOT
+pip install --upgrade pip
+pip install -r requirements.txt
 ```
 
 Install Manipulation Imitation Environments ([MImE](https://github.com/ikalevatykh/mime-release)):
