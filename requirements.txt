@@ -1,6 +1,6 @@
 sacred==0.7.5
 sk-video
-torch==1.1.0
+torch==2.2.0
 torchvision==0.3.0
 tensorboardX
 dask[complete]
